@@ -1,0 +1,37 @@
+<?php
+	
+	class Contas{
+		
+		private $saldo = 0;
+		
+		public function depositar($valor){
+			
+			$this->saldo += $valor;
+		}
+		
+		public function sacar($valor){
+			
+			if($this->saldo >= $valor){
+				
+				$this->saldo -= $valor;
+				
+				return true;
+			}elseif ($this->saldo < $valor){
+				
+				
+			return false;
+			}
+			
+		}
+		
+	public function getSaldo() {
+		return $this->saldo;
+	}
+	public function setSaldo($saldo) {
+		$this->saldo = $saldo;
+		return $this;
+	}
+	
+		
+		
+	}
